@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:icon="@drawable/clouds">
+    <PreferenceCategory
+        android:title="@string/weatherlocation">
+        <SwitchPreference
+            android:key="USE_DEVICE_LOCATION"
+            android:title="@string/usedevicelocation"
+            android:summary="@string/allow"
+            android:defaultValue="true"
+            android:disableDependentsState="true"/>
+
+        <SwitchPreferenceCompat
+            android:key="CUSTOM_LOCATION"
+            android:title="@string/maplocation"
+            android:summary="@string/thelocation"
+            android:defaultValue=""
+            android:dependency="USE_DEVICE_LOCATION"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/units">
+        <ListPreference
+            android:key="UNIT_SYSTEM"
+            android:summary="%s"
+            android:defaultValue="metric"
+            android:entries="@array/unitSystemEntries"
+            android:entryValues="@array/unitSystemValues"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/language">
+        <ListPreference
+            android:key="LANGUAGE_SYSTEM"
+            android:summary="%s"
+            android:defaultValue="en"
+            android:entries="@array/languageSystemEntries"
+            android:entryValues="@array/languageSystemValues"/>
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

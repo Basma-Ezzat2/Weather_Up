@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather Up</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="alerts">التنبيهات</string>
+    <string name="favourites">المفضلة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="gps">نظام تحديد المواقع العالمي</string>
+    <string name="map">الخريطة</string>
+    <string name="celzious">مئوية</string>
+    <string name="fehrenhite">فهرنهيت</string>
+    <string name="m_sec">م/ثانية</string>
+    <string name="miles_h">ميل/س</string>
+    <string name="wind">الرياح</string>
+    <string name="nodangerous">No Dangerous Alerts for now.</string>
+    <string name="alert">Alert</string>
+    <string name="today">اليوم</string>
+    <string name="tomorrow">غدََا</string>
+    <string name="now">الأن</string>
+    <string name="feelsLike">Feels like 20.4°C</string>
+    <string name="c">م°</string>
+    <string name="k">ك°</string>
+    <string name="f">ف°</string>
+    <string name="ms">م/ثانية</string>
+    <string name="mh">ميل/س</string>
+    <string name="pa">بار</string>
+    <string name="messageDel">هل أنت متأكد من حذفها؟</string>
+    <string name="english">الإنجليزية</string>
+    <string name="arabic">العربية</string>
+    <string name="delete">حذف</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="youHave">You have to put mark on place to add it!</string>
+    <string name="cM">C° - سرعة الرياح م/ث</string>
+    <string name="kM">K° - سرعة الرياح م/ث</string>
+    <string name="fM">F° - سرعة الرياح ميل/س </string>
+    <string name="weatherlocation">موقع الطقس</string>
+    <string name="usedevicelocation">استخدام موقع الهاتف</string>
+    <string name="allow">السماح للتطبيق بإيجاد موقعك</string>
+    <string name="maplocation">استخدام الخريطة</string>
+    <string name="thelocation">اختر الموقع الذي تريد عرضه</string>
+    <string name="units">وحدات القياس</string>
+    <string name="language">اللغة</string>
+
+
+</resources>
