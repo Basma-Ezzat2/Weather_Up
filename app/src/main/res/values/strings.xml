@@ -40,5 +40,9 @@
     <string name="thelocation">The location for which the weather is displayed</string>
     <string name="units">Units</string>
     <string name="language">Language</string>
+    <string name="noity">Notifications</string>
+    <string name="allownoty">Allow Notification</string>
+    <string name="alarmm">Alarm</string>
+    <string name="enable">Enable Alarm Notification</string>
 
 </resources>

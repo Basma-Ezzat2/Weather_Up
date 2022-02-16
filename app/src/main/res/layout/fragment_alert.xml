@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.alert.AlertsFragment">
+    tools:context=".ui.alert.AlertsFragment"
+    android:id="@+id/back">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -12,8 +13,8 @@
         android:layout_width="57dp"
         android:layout_height="56dp"
         android:clickable="true"
-        android:src="@drawable/ic_notifications_black_24dp"
-        android:backgroundTint="#CCAFA5"
+        android:src="@drawable/alarm_add"
+        android:backgroundTint="@color/colorLightBlue"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,10 +10,10 @@ class SharedPreference(var context: Context) {
     val fromMap = sp.getBoolean("CUSTOM", true)
     val units= sp.getString("UNIT_SYSTEM", "metric")
     val language = sp.getString("LANGUAGE_SYSTEM", "en")
-    var lat = sp.getString("lat", "30.033333")
-    var long = sp.getString("long", "31.233334")
-    var mapLat = sp.getString("mapLat", "30.033333")
-    var mapLong = sp.getString("mapLong", "31.233334")
+    var lat = sp.getString("lat", "30.630195")
+    var long = sp.getString("long", "31.358386")
+    var mapLat = sp.getString("mapLat", "30.630195")
+    var mapLong = sp.getString("mapLong", "31.358386")
     var alarmType:Boolean = false
 
 }

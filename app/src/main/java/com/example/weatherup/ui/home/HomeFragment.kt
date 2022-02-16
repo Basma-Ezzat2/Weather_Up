@@ -1,8 +1,9 @@
 package com.example.weatherup.ui.home
 
+import android.location.Address
 import android.location.Geocoder
+import android.location.LocationManager
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +18,6 @@ import com.example.weatherup.databinding.FragmentHomeBinding
 import com.example.weatherup.data.model.local.SharedPreference
 import com.example.weatherup.data.entity.Daily
 import com.example.weatherup.data.entity.Hourly
-import com.example.weatherup.data.model.remote.LATITUDE
-import com.example.weatherup.data.model.remote.LONGITUDE
 import com.forecast.weather.ui.home.DailyAdapter
 import java.util.*
 
@@ -28,10 +27,12 @@ class HomeFragment : Fragment() {
     private lateinit var shared: SharedPreference
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    lateinit var myLat:String
-    lateinit var myLong:String
+    private lateinit var myLat:String
+    private lateinit var myLong:String
     private val hourlyAdapter= HourlyAdapter(arrayListOf())
     private val dailyAdapter=DailyAdapter(arrayListOf())
+    private lateinit var city: String
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -57,6 +58,7 @@ class HomeFragment : Fragment() {
         else {
             myLat =shared.lat.toString()
             myLong =shared.long.toString()
+
         }
         //hourly adapter
         initUI()
@@ -79,10 +81,18 @@ class HomeFragment : Fragment() {
                 binding.progressBarLoading.visibility = View.GONE
                 var geocoder =
                     Geocoder(requireContext().applicationContext, Locale.getDefault())
-                var city = geocoder.getFromLocation(LATITUDE.toDouble(), LONGITUDE.toDouble(), 1)
+                val addresses: List<Address> = geocoder.getFromLocation(
+                    it.lat,
+                    it.lon,
+                    1
+                )
+                if (addresses.isNotEmpty()) {
+                    city = (addresses[0].getAddressLine(0))
+                }
+                /*var city = geocoder.getFromLocation(LATITUDE.toDouble(), LONGITUDE.toDouble(), 1)
                 Log.i("CITY", city.toString())
-                var cityName = if (equals(null)) city[0].featureName else city[0].adminArea
-                binding.cityName.text = cityName
+                var cityName = if (equals(null)) city[0].featureName else city[0].adminArea*/
+                binding.cityName.text = city
                 if (shared.units.equals("metric")) {
                     binding.textViewTemperature.text = it.current.temp.toInt().toString() + getString(R.string.c)
                     binding.textViewWind.text ="Wind Speed "+  it.current.wind_speed.toString() +" "+getString(R.string.ms)
@@ -125,8 +135,5 @@ class HomeFragment : Fragment() {
         hourlyAdapter.updateHours(it)
         binding.recyclerViewHourly.visibility=View.VISIBLE
     }
-
-
-
 
 }

@@ -14,7 +14,7 @@
             android:key="CUSTOM_LOCATION"
             android:title="@string/maplocation"
             android:summary="@string/thelocation"
-            android:defaultValue=""
+            android:defaultValue="false"
             android:dependency="USE_DEVICE_LOCATION"/>
 
     </PreferenceCategory>
@@ -37,7 +37,5 @@
             android:entries="@array/languageSystemEntries"
             android:entryValues="@array/languageSystemValues"/>
     </PreferenceCategory>
-
-
 
 </PreferenceScreen>

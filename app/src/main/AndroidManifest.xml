@@ -20,6 +20,9 @@
             android:label="@string/app_name"/>
         <activity android:name="com.example.weatherup.ui.favourite.favorite_details.FavouriteDetails" />
         <activity
+            android:name=".ui.alert.AddAlert"
+            android:label="Add Alarm"/>
+        <activity
             android:name=".ui.map.Maps"
             android:label="Maps" />
         <activity

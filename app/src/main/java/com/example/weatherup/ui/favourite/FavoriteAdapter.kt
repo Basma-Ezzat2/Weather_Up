@@ -59,5 +59,4 @@ class FavoriteAdapter(var countries: ArrayList<Weather>, var favoriteCitesViewMo
 
         }
     }
-
 }

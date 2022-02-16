@@ -14,7 +14,7 @@ import com.example.weatherup.data.entity.Weather
 
 @Database(
     entities = [Weather::class, Alarm::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 @TypeConverters(Converter::class)

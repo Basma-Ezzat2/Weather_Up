@@ -41,6 +41,9 @@
     <string name="thelocation">اختر الموقع الذي تريد عرضه</string>
     <string name="units">وحدات القياس</string>
     <string name="language">اللغة</string>
-
+    <string name="noity">الإشعارات</string>
+    <string name="allownoty">السماح بالإشعارات</string>
+    <string name="alarmm">المنبه</string>
+    <string name="enable">تفعيل إخطارات التنبيه</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.app.weatheappworld.utils
+package com.example.weatherup.utils
 
 class ResourceWeather <out T>(val status: Status, val message: String?, val data: T?) {
     enum class Status {
